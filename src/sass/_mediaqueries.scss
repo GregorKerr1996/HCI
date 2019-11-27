@@ -1,0 +1,27 @@
+// Screen sizes ≥ 1200
+@include media-breakpoint-down(xl) {}
+
+// Screen sizes ≥ 768px
+@include media-breakpoint-down(md) {
+    #site-title {
+        width: 100vw;
+        text-align: center;
+
+        .display-1 {
+            font-size: 2em;
+        }
+    }
+}
+
+// Screen sizes ≥ 576px
+@include media-breakpoint-down(sm) {
+    .slide-out {
+        min-width: 100vw;
+    }
+}
+
+// Screen sizes < 576px
+@include media-breakpoint-down(xs) {}
+
+// Screen sizes <= 334 px
+@media (max-width: 334px) {}

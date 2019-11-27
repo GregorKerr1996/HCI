@@ -1,0 +1,44 @@
+<div *ngIf="marker" class="p-5">
+  <!-- Title -->
+  <h1 class="display-4">{{marker.title}}</h1>
+
+  <!-- Date -->
+  <p *ngIf="marker.date">{{marker.date}}</p>
+
+  <!-- Description -->
+  <p *ngIf="marker.description" class="lead">{{marker.description}}</p>
+
+  <!-- Featured Image -->
+  <div class="container justify-content-center">
+    <img *ngIf="marker.featuredImage" [src]="marker.featuredImage" class="rounded w-100 my-2" alt="...">
+  </div>
+
+  <!-- Additional content-->
+  <div class="container justify-content-center">
+    <div *ngIf="marker.associatedContent">
+      <ng-container *ngFor="let content of marker.associatedContent">
+
+        <!-- VIEW BASED ON CONTENT -->
+        <ng-container [ngSwitch]="content.type">
+          <!-- IMAGE -->
+          <div *ngSwitchCase="ContentType.IMAGE" class="card my-2">
+            <img [src]="content.url" class="card-img-top" alt="...">
+
+            <div *ngIf="content.body" class="card-body">
+              <p class="card-text">{{content.body}}</p>
+            </div>
+          </div>
+
+          <!-- TEXT / POEM  -->
+          <div *ngSwitchCase="ContentType.TEXT" class="card my-5" style="font-style: italic; font-size: 2rem">
+            <div class="card-body display-4" style="font-size: 2rem">
+              {{content.body}}
+            </div>
+          </div>
+
+        </ng-container>
+        <!-- content text -->
+      </ng-container>
+    </div>
+  </div>
+</div>
