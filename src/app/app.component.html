@@ -1,61 +1,17 @@
+<!-- This is useless atm, need to move from index.html to here -->
 <html>
+<h2 id="current"></h2>
+<canvas id="globe"></canvas>
 
-<div id="site-title" class="card bg-transparent border-0 text-white position-absolute" style="pointer-events: none;">
-    <div class="card-body">
-        <h1 class="display-1 cursive-font">Gregor, Matthew and Alexa</h1>
-        <br>
-        <br>
-        <p class="card-text">Interactative NCD Globe!!</p>
+<div id="mySidenav" class="sidenav">
+    <h1 id="selected"></h1>
+    <h3>NCD Statistics:</h3>
+    <div class="background">
+        <div><img src="/assets/images/usa.png"></div>
     </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 </div>
-
-<div id="debug-panel">
-    <!-- Debugging panel -->
-    <!-- <div class="card position-fixed">
-        <div class="card-body">
-            <div class="form-group">
-                <ng-container *ngIf="this.currentAddress">
-                    <label class="mt-2">Address</label>
-                    <h3 class="form-text">
-                        {{this.currentAddress.country}},{{this.currentAddress.city}},{{this.currentAddress.street}}
-                    </h3>
-                </ng-container>
-
-                <ng-container *ngIf="this.currentPosition else emptyState">
-                    <label class="mt-2">Coordinates</label>
-                    <h3 class="form-text">
-                        {{this.currentPosition.latitude}},{{this.currentPosition.longitude}}
-                    </h3>
-                </ng-container>
-                <ng-template #emptyState>
-                    You're too far away! Zoom in closer.
-                </ng-template>
-            </div>
-        </div>
-    </div> -->
-
-
-
-    <!-- Crosshairs -->
-    <div [ngClass]="[displayCrosshairs ? '': 'd-none']">
-        <div class="v-line"></div>
-        <div class="h-line"></div>
-    </div>
-</div>
-
-<div class="slide-out-container">
-    <!-- Pop out container-->
-    <div [ngClass]="['slide-out overflow-auto ', showActivities ? 'expand':'']">
-        <!-- exit button -->
-        <div class="exit-slide-out font-weight-bold" (click)="toggleActivities()">x</div>
-        <!-- Detail view -->
-        <app-detail-view *ngIf="this.selectedMarker" [marker]="selectedMarker"></app-detail-view>
-    </div>
-</div>
-
-<app-globe-view (selectedMarker)="selectMarker($event)" (selectedOutside)="deSelectMarker()" [inputMarkers]="markers">
-</app-globe-view>
 
 </html>
-<router-outlet>
-</router-outlet>
+
+<router-outlet></router-outlet>
