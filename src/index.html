@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon"
+    href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/198/earth-globe-americas_1f30e.png">
   <!-- <div id="site-title" class="card bg-transparent border-0 text-white position-absolute" style="pointer-events: none;">
     <div class="card-body">
       <h1 class="display-1 cursive-font">Matthew, Gregor and Alexa</h1>
@@ -23,19 +24,21 @@
   <h2 id="current"></h2>
   <canvas id="globe"></canvas>
   <div id="mySidenav" class="sidenav">
-    <h1 id="selected"></h1>
+    <b>
+      <h1 id="selected"></h1>
+    </b>
     <h3>NCD Statistics:</h3>
-    <button class="accordion">DEATHS</button>
+    <button class="accordion">MORTALITY RATES</button>
     <div class="panel">
-      <img src="" width="460px">
+      <img src="" width="500px">
     </div>
 
-    <button class=" accordion">SOMETHING</button>
+    <button class=" accordion">RISK FACTORS</button>
     <div class="panel">
       Herro
     </div>
 
-    <button class="accordion">SOMETHING ELSE</button>
+    <button class="accordion">NATIONAL CAPACITY</button>
     <div class="panel">
       :)
     </div>
@@ -90,8 +93,8 @@
     currentURL = currentURL + country.name.toLowerCase().replace(/\s/g, '') + ".png"
     var img = document.querySelector("img")
     img.setAttribute("src", currentURL)
+
     selected.text(country && country.name || 'No Country Name')
-    console.log(currentURL)
   }
 
   function closeNav() {

@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #000;
+  height: 100%;
 }
 
 #globe {
@@ -28,7 +29,7 @@ position: fixed;
 z-index: 1;
 top: 0;
 right: 0;
-background-color: #00BFFF;
+background-color: #000(126, 169, 184);
 overflow-x: hidden;
 transition: 0.5s;
 padding-top: 60px;
@@ -88,7 +89,7 @@ margin-left: 50px;
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 5px, 5px, 5px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
