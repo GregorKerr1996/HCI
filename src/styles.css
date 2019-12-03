@@ -8,6 +8,7 @@ html, body {
 
 #globe {
   cursor: move;  
+  /* opacity: 0.4; */
 }
 
 #current {
