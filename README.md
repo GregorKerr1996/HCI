@@ -3,7 +3,7 @@ Aimed to allow Users to check non-communicable disease (NCD) statistics for any 
 
 Interactive 3D Globe Design
 
-![](ReadMeImages/recording.gif
+![](ReadMeImages/recording.gif)
 
 
 
