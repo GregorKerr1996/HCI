@@ -3,7 +3,9 @@ Aimed to allow Users to check non-communicable disease (NCD) statistics for any 
 
 Interactive 3D Globe Design
 
-![](ReadMeImages/view.png)
+![](ReadMeImages/recording.gif
+
+
 
 ### Created by Gregor, Matthew and Alexa
 Technologies 
@@ -12,5 +14,4 @@ Technologies
 * Json
 * HTML + CSS
 
-
-![](ReadMeImages/recording.gif)
+![](ReadMeImages/view.png)
